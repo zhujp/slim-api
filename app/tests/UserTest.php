@@ -5,6 +5,15 @@ use GuzzleHttp\Client;
 class UserTest extends TestCase
 {
 
+    private $client;
+
+    public function setUp()
+    {
+        $this->client = new Client([
+            'base_uri' => 'http://z.slim.com',
+            'http_errors' => false, #设置成 false 来禁用HTTP协议抛出的异常(如 4xx 和 5xx 响应)，默认情况下HTPP协议出错时会抛出异常。
+        ]);
+    }
     public function testUser()
     {
         $response = $this->client->get('/user/vilay');
