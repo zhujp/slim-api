@@ -1,0 +1,15 @@
+{
+    "require": {
+        "slim/slim": "^3.8",
+        "illuminate/database": "^5.4",
+        "guzzlehttp/guzzle": "^6.3",
+        "psr/log": "^1.0",
+        "phpunit/phpunit": "^6.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "app\\": "app/src"
+        },
+        "files" : ["app/helpers.php"]
+    }
+}
