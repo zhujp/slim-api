@@ -46,4 +46,13 @@ $app->patch('/user/{id:[0-9]+}',app\controllers\UserController::class.':patch');
 $app->delete('/user/{id:[0-9]+}',app\controllers\UserController::class.':delete');
 
 
+/**
+ * 版本路由
+ */
+
+$app->group('/v2',function() {
+    $this->get('/user/{id:[0-9]+}',app\controllers\UserController::class.':user');
+});
+
+
 

@@ -117,9 +117,12 @@ class UserController extends Controller
     }
 
     public function user($request, $response, $args) {
-        $user = Users::where('username',$args['name'])->first();
-
-        $data = $this->createResponse($user);
+        $user = Users::where('id',$args['id'])->first();
+        $info = [
+            'name' => $user->name,
+            'mobile' => $user->mobile,
+        ];
+        $data = $this->createResponse($info);
         return $response->withJson($data);
         // return $response->withHeader('username','vilay')->write('hello '.$user['email']);
     }
