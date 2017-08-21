@@ -7,12 +7,12 @@ return [
         'db' => [
             'driver' => 'mysql',
             'host' => '127.0.0.1',
-            'database' => '',
-            'username' => '',
-            'password' => '',
+            'database' => 'ai_vilay_com',
+            'username' => 'root',
+            'password' => '34130707',
             'charset' => 'utf8',
             'collation' => 'utf8_unicode_ci',
-            'prefix' => ''
+            'prefix' => 'z_'
         ],
     ],
 ];

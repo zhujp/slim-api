@@ -11,7 +11,7 @@ class Controller
      * @param  string  $msg  错误消息提示
      * @return array        响应数据
      */
-    public function createResponse($data,$code=0,$msg='')
+    public function createResponse($data,$code=200,$msg='')
     {
         return array (
             'data' => $data,
